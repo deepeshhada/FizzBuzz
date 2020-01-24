@@ -3,7 +3,7 @@
 ## Objective 
 The project is a task that is to be solved using two approaches:  
 1. *Logic-based* approach - **Software 1.0**.
-2. *Deep learning* approach - **Software 2.0**.
+2. *Deep learning* approach - **Software 2.0**.  
 It is also designed to quickly gain familiarity with neural network basics, Python and Machine Learning frameworks.  
 
 ## Task
