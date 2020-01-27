@@ -56,12 +56,17 @@ def train_model():
 
 	x, y = generate_training_set()
 
-	learning_rate = 11
+	learning_rate = 8
 	loss_arr = []
 	accuracy_arr = []
 	loss = 1000
+	epochs = 0
 
-	while loss > 0.027:
+	while loss > 0.045:
+		epochs += 1
+		if epochs > 4000:
+			learning_rate = 3
+
 		y_hat = model(x, weight1.float(), bias1, weight2.float(), bias2)
 		accuracy_arr.append(accuracy(y_hat, y))
 		loss = F.mse_loss(y_hat.float(), y.float())
@@ -77,6 +82,7 @@ def train_model():
 			weight2.grad.zero_()
 			bias2.grad.zero_()
 
+	print("Epochs: ", epochs)
 	print("Accuracy before training: ", accuracy_arr[0]*100, '%')
 	print("Accuracy after training: ", accuracy_arr[-1], '%')
 
