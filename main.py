@@ -78,3 +78,8 @@ input_list = generate_test_input(args.test_data)
 
 software1()
 software2()
+
+print("Name = Deepesh Virendra Hada")
+print("IISc SR No. = 17196")
+print("Course = M.Tech.")
+print("Department = CSA")
